@@ -1,4 +1,4 @@
-//buscando por seleï¿½ï¿½o
+//buscando por seleção
 //ana leticia
 
 #include <stdio.h>
@@ -7,14 +7,14 @@ void ordenaSelecao(int vet[], unsigned tamVet) {
 	unsigned i, cont, posMenor;
 	int guardaValor, menor;
 
-	/*nï¿½o pode usar i na comparacao vet[cont] < vet[i]
+	/*não pode usar i na comparacao vet[cont] < vet[i]
  	porque no fim ficaria vet[i] > vet[i] */
 
 	for(i = 0; i < tamVet -1; i++) {
 		posMenor = i;
 	//incio o vetor, pego a primeira posicao para comparar com as seguintes
 			for(cont = i+1; cont < tamVet; cont++) {
-				//seleciono o resto do vetor e vejo quem ï¿½ o menor
+				//seleciono o resto do vetor e vejo quem é o menor
 				if(vet[cont] < vet[posMenor]) {
 					//o que for menor, eu pego a sua posicao
 					posMenor = cont;
@@ -23,7 +23,7 @@ void ordenaSelecao(int vet[], unsigned tamVet) {
 	/*se o primeiro elemento do vetor for
 	 maior que o menor elemento no vetor inteiro,
 	 eu troco os valores para que o menor elemento esteja
-	 na primeira posiï¿½ï¿½o do vetor */
+	 na primeira posição do vetor */
 		if(vet[i] > vet[posMenor]) {
 			guardaValor = vet[i];
 			vet[i] = vet[posMenor];
